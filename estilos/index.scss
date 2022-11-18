@@ -1,0 +1,269 @@
+$color_1: black;
+$color_2: white;
+$font-family_1: 'Work Sans', sans-serif;
+$background-color_1: black;
+
+@keyframes slideInFromLeft {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 100;
+	}
+}
+body {
+	margin: 0;
+	font-family: $font-family_1;
+	cursor: default;
+}
+.menu-bar {
+	padding: 10px;
+}
+.menu-bar-buttons {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+}
+.menu-button {
+	text-decoration: none;
+	color: $color_1;
+	border: 1px solid black;
+	padding: 4px;
+}
+.border-bottom {
+	border-bottom: 1px solid black;
+}
+.title-container {
+	text-align: center;
+}
+.title {
+	font-size: 70px;
+	margin-bottom: 0;
+	font-weight: 900;
+}
+.video-container {
+	width: 100%;
+	overflow: hidden;
+	height: 400px;
+}
+.video-colection-container {
+	width: 100%;
+	overflow: hidden;
+	max-height: 350px;
+}
+#background-video {
+	width: 100%;
+}
+.subtitle {
+	text-align: center;
+	font-style: italic;
+	font-size: 20px;
+	animation: 0.8s ease-out 0s 1 fadeInAnimation;
+}
+.card-row {
+	display: flex;
+	justify-content: start;
+	flex-flow: wrap;
+}
+.card-container-left {
+	text-align: center;
+	height: auto;
+	margin: 6px;
+	padding: 15px;
+	flex: 1;
+}
+.card-container-right {
+	text-align: center;
+	height: auto;
+	margin: 6px;
+	padding: 15px;
+	flex: 2;
+	border: black solid 1px;
+}
+.card-product-image {
+	width: 400px;
+}
+.card-image {
+	width: 820px;
+}
+.card-text {
+	min-width: 210px;
+}
+.table-row {
+	display: flex;
+	justify-content: center;
+	flex-flow: wrap;
+}
+.product-container {
+	text-align: center;
+	height: auto;
+	border: 1px solid black;
+	margin: 6px;
+	padding: 15px;
+	max-width: 300px;
+}
+.product-image {
+	width: 270px;
+}
+.product-buy-icon {
+	width: 18px;
+	margin: 0px;
+	padding: 2px;
+	border: 3px solid;
+	border-radius: 25px;
+	cursor: pointer;
+}
+.product-title {
+	font-weight: 800;
+	margin-bottom: 0;
+}
+.product-price {
+	margin-top: 0;
+	font-style: italic;
+}
+.section-products-footer {
+	text-align: center;
+	padding: 20px;
+}
+.seemore {
+	text-decoration: none;
+	color: $color_1;
+	font-size: 20px;
+}
+.s-margin {
+	padding: 20px;
+}
+.collection-title {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	text-align: center;
+	font-size: 70px;
+	color: $color_2;
+	height: fit-content;
+}
+.collection-video {
+	position: relative;
+	overflow: hidden;
+	height: 400px;
+	object-fit: cover;
+	width: 100%;
+}
+.collection-container {
+	position: relative;
+}
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.imhere {
+	font-weight: 800;
+}
+.model-container {
+	text-align: center;
+	height: auto;
+	border: 1px solid black;
+	margin: 6px;
+	padding: 15px;
+	animation: 0.8s ease-out 0s 1 slideInFromLeft;
+}
+.model-image {
+	width: 380px;
+	object-fit: cover;
+	filter: grayscale(1);
+	transition-duration: 300ms;
+	&:hover {
+		filter: none;
+	}
+}
+.model-title {
+	font-weight: 800;
+	margin-bottom: 0;
+}
+.model-price {
+	margin-top: 0;
+	font-style: italic;
+}
+.table-column {
+	flex: 1;
+	padding: 20px;
+}
+.footer-social-media-container {
+	text-align: right;
+	padding-top: 40px;
+	padding-right: 40px;
+}
+.footer-text-container {
+	text-align: left;
+	padding-left: 40px;
+}
+.social-media-icon {
+	width: 30px;
+	-webkit-filter: brightness(0) invert(1);
+	filter: brightness(0) invert(1);
+}
+.footer {
+	background-color: $background-color_1;
+	margin-top: 70px;
+	color: $color_2;
+	font-size: 12px;
+}
+.carousel-inner {
+	padding-top: 50px;
+}
+.navbar-brand {
+	font-family: $font-family_1;
+}
+@media (max-width: 449px) {
+	.menu-bar {
+		display: none;
+	}
+	.mobile-no-visible {
+		display: none;
+	}
+	.video-container {
+		height: auto;
+	}
+	.collection-title {
+		font-size: 45px;
+	}
+	.subtitle {
+		font-size: 15px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.model-image {
+		width: 240px;
+	}
+}
+@media (min-width: 450px) {
+	.menu-bar-mobile {
+		display: none;
+	}
+}
+@media (max-width: 880px) {
+	.card-image {
+		width: 100%;
+	}
+	.collection-image-mobile {
+		flex-direction: column;
+	}
+	.card-product-image {
+		width: 100%;
+	}
+}
